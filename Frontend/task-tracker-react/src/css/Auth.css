@@ -1,0 +1,178 @@
+/* complete page container */
+.flex-container-auth {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+.flex-container-auth > div {
+  flex-basis: 50%;
+}
+
+/* animation conatainer */
+.flex-item-1-auth {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    30deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(36, 6, 191, 1) 52%,
+    rgba(5, 121, 156, 1) 100%
+  );
+}
+
+.flex-item-1-auth > div {
+  align-self: center;
+  z-index: 2;
+}
+
+/* Logo SVG Container */
+.logo-wrapper {
+  height: 170px;
+  width: 170px;
+}
+/* logo rectangle rotation transform */
+.Rectangle {
+  animation: squarebox 8s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes squarebox {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Website Name  */
+.css-3d-text {
+  font-size: 80px;
+  color: #ffffff;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-shadow: 0px 0px 0 rgb(240, 240, 240), 0px 1px 0 rgb(225, 225, 225),
+    0px 2px 0 rgb(210, 210, 210), 0px 3px 0 rgb(194, 194, 194),
+    0px 4px 0 rgb(179, 179, 179), 0px 5px 0 rgb(164, 164, 164),
+    0px 6px 0 rgb(149, 149, 149), 0px 7px 6px rgba(27, 165, 224, 0),
+    0px 7px 1px rgba(27, 165, 224, 0.5), 0px 0px 6px rgba(27, 165, 224, 0.2);
+}
+
+/* Webstie a breif line */
+.message-wrapper {
+  color: rgb(192, 192, 192);
+  font-family: monospace;
+}
+
+/* Form Container */
+.flex-item-2-auth {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-self: center;
+}
+
+/* Form Heading (Signin or signup) */
+.form-header-wrapper {
+  align-self: center;
+  color: #12036b;
+  margin-bottom: 2%;
+  padding: 2%;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* form container */
+
+.form-wrapper {
+  width: 90%;
+  align-self: center;
+}
+
+/* when width of content is greater than 500px then showing shadow and border box */
+@media screen and (min-width: 500px) {
+  .form-wrapper {
+    box-sizing: border-box;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 3%;
+  }
+
+  .form-wrapper {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 8px 12px 0 rgba(141, 141, 141, 0.5);
+    transition: 0.5s ease-in-out;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+  .form-wrapper:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* dropping the shadow and border box when width less than 500px */
+@media screen and (max-width: 500px) {
+  .form-wrapper {
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  #logo-wrapper {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* when width is less than 900px then making the container look like 
+logo and name up 
+form down
+*/
+@media screen and (max-width: 900px) {
+  .flex-container-auth {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  /* .flex-item-1-auth {
+        height: 10vh;
+    }
+    .flex-item-2-auth {
+        height: 80vh;
+    } */
+
+  #bubble-container {
+    display: none;
+  }
+}
+
+/* link styling */
+#login-link:hover {
+  font-weight: bold;
+}
+/* submit Button */
+.btn-submit {
+  background-color: hsl(300, 100%, 15%);
+  color: white;
+  min-width: 20%;
+  height: auto;
+  border: 0px;
+  border-radius: 5px;
+  padding: 0.5%;
+  transition: 0.2s ease-in;
+}
+
+.btn-submit:hover {
+  background-color: hsl(300, 100%, 18%);
+  transform: scale(1.1);
+}
+
+.requiredStar::after {
+  color: red;
+  content: "*";
+  margin-left: 5px;
+}
